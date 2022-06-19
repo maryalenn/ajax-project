@@ -21,12 +21,8 @@
   </header>
   <main class="container">
     <div id="current-joke">
-      <div class="joke">
-        <div class="setup">A Roman walks into a bar and raises 2 fingers and says to the bartender...</div>
-        <div class="delivery">&quot;Five Beers, please.&quot;</div>
-      </div>
     </div>
-    <div class="rate-joke">
+    <div class="rate-joke hidden">
       <i class="dislike"><img src="/images/frown.png" alt=""></i>
       <h2>Rate This Joke</h2>
       <i class="like"><img src="/images/smiley.svg" alt="">
@@ -34,10 +30,10 @@
 
     </div>
     <div class="new-joke-buttons">
-      <button class="category"><span>Choose A</span><br>Category</button>
-      <button class="new-joke">New Joke</button>
+      <button class="category hidden" id="btnChooseCategory"><span>Choose A</span><br>Category</button>
+      <button class="new-joke" id="btnNewJoke">New Joke</button>
     </div>
-    <div class="favorite-jokes">
+    <div class="favorite-jokes hidden">
       <div class="favorite-jokes-header">
         <img src="/images/heart-eyes.svg" alt="">
         <h2>Favorite Jokes</h2>
@@ -69,14 +65,14 @@
         <h1>Choose a Category</h1>
         <div class="category-buttons flex-col">
           <ul class="new-joke-buttons flex-col">
-            <li><button class="category">Misc</button></li>
-            <li><button class="category">Puns</button></li>
-            <li><button class="category">Techy</button></li>
+            <li><button class="category" id="cat-misc">Misc</button></li>
+            <li><button class="category" id="cat-puns">Puns</button></li>
+            <li><button class="category" id="cat-coding">Techy</button></li>
           </ul>
           <ul class="new-joke-buttons flex-col">
-            <li><button class="category">Dark</button></li>
-            <li><button class="category">Spooky</button></li>
-            <li><button class="category">Christmas</button></li>
+            <li><button class="category" id="cat-dark">Dark</button></li>
+            <li><button class="category" id="cat-spooky">Spooky</button></li>
+            <li><button class="category" id="cat-christmas">Christmas</button></li>
           </ul>
         </div>
       </div>

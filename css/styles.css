@@ -23,10 +23,19 @@ header {
   text-align: center;
 }
 
+button {
+  transition-property: background-color;
+  transition-duration: 1s;
+}
+
 .container {
   /* display: flex; */
   width: 350px;
   margin: 0 auto;
+}
+
+.center {
+  text-align: center;
 }
 
 .favorite-joke .joke {
@@ -42,6 +51,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 #current-joke .joke {
@@ -52,13 +62,27 @@ header {
   width: 110%;
   padding-top: 60px;
   padding-left: 70px;
-  padding-right: 90px;
+  padding-right: 95px;
+  padding-bottom: 118px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  word-wrap: break-word;
+}
+
+.setup,
+.delivery {
+  max-width: 190px;
+  overflow: auto;
 }
 
 .delivery {
   padding-top: 15px;
   text-align: right;
   padding-right: 10px;
+  font-style: italic;
+  font-size: 105%;
 }
 
 .rate-joke {
