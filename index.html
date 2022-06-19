@@ -4,15 +4,80 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AJAX Project</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat&display=swap');
+  </style>
+  <link rel="stylesheet" crossorigin="anonymous"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==">
   <link rel="icon" href="images/favicon.ico">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header>
+  <header class="container">
+    <h1>Just for Laughs</h1>
   </header>
-  <main>
+  <main class="container">
+    <div id="current-joke">
+    </div>
+    <div class="rate-joke hidden">
+      <i class="dislike"><img src="/images/frown.png" alt=""></i>
+      <h2>Rate This Joke</h2>
+      <i class="like"><img src="/images/smiley.svg" alt="">
+      </i>
+
+    </div>
+    <div class="new-joke-buttons">
+      <button class="category hidden" id="btnChooseCategory"><span>Choose A</span><br>Category</button>
+      <button class="new-joke" id="btnNewJoke">New Joke</button>
+    </div>
+    <div class="favorite-jokes hidden">
+      <div class="favorite-jokes-header">
+        <img src="/images/heart-eyes.svg" alt="">
+        <h2>Favorite Jokes</h2>
+        <img src="/images/laughing.svg" alt="">
+      </div>
+      <div class="favorite-joke">
+        <div class="icon-buttons">
+          <i class="fa fa-solid fa-copy"></i>
+          <i class="fa fa-solid fa-times-circle"></i>
+        </div>
+        <div class="joke">
+          <div class="setup">How many programmers does it take to screw in a light bulb?</div>
+          <div class="delivery">None. It's a hardware problem.</div>
+        </div>
+      </div>
+      <div class="favorite-joke">
+        <div class="icon-buttons">
+          <i class="fa fa-solid fa-copy"></i>
+          <i class="fa fa-solid fa-times-circle"></i>
+        </div>
+        <div class="joke">
+          <div class="setup">Debugging is like being the detective in a crime movie where you're also the murderer at the same time.</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="overlay hidden">
+      <div class="modal">
+        <h1>Choose a Category</h1>
+        <div class="category-buttons flex-col">
+          <ul class="new-joke-buttons flex-col">
+            <li><button class="category" id="cat-misc">Misc</button></li>
+            <li><button class="category" id="cat-puns">Puns</button></li>
+            <li><button class="category" id="cat-coding">Techy</button></li>
+          </ul>
+          <ul class="new-joke-buttons flex-col">
+            <li><button class="category" id="cat-dark">Dark</button></li>
+            <li><button class="category" id="cat-spooky">Spooky</button></li>
+            <li><button class="category" id="cat-christmas">Christmas</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </main>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
